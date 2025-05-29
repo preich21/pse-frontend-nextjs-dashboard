@@ -7,10 +7,7 @@ import {Button} from '@/app/ui/button';
 import {State, updateInvoice} from '@/app/lib/actions';
 import {useActionState} from "react";
 
-export default function EditInvoiceForm({
-                                            invoice,
-                                            customers,
-                                        }: {
+export default function EditInvoiceForm({invoice, customers,}: {
     invoice: InvoiceForm;
     customers: CustomerField[];
 }) {

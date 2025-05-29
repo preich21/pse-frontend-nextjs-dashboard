@@ -57,6 +57,7 @@ export async function createInvoice(_prevState: State, formData: FormData): Prom
             VALUES (${customerId}, ${amountInCents}, ${status}, ${date})
         `
     } catch (error) {
+        console.error(error)
         return {
             message: 'Database error. Failed to create invoice.',
         }
@@ -92,6 +93,7 @@ export async function updateInvoice(id: string, _prevState: State, formData: For
             WHERE id = ${id}
         `
     } catch (error) {
+        console.error(error)
         return {
             message: 'Database error. Failed to update invoice.',
         }
